@@ -1,0 +1,77 @@
+creating a config file for your radio dongle
+
+
+Config file:
+
+A file to specify the sdr device, the purpose and the parameters to control and tune the device.
+
+
+============================================================
+# sample entry for airspyHF+
+[example2]
+#samprate 912000           ; default
+description = G5RV
+serial = 3652D65D4ACB39F8
+iface = eth0	           ; force primary interface, avoid wifi
+status = g5rv.local
+data = g5rv-data.local
+hf-agc = 0
+agc-thresh = 0
+hf-att = 0;
+hf-lna = 0
+lib-dsp = 1
+data-ttl = 0
+status-ttl = 1
+blocksize = 2048 # default for data-ttl = 0
+#ssrc            # generated from time of day
+tos = 48
+frequency = 10000000  # default
+===========================================================
+
+
+
+C code:
+
+Describes the functions to interface the radio device
+
+h file:
+
+Support file for the C code
+
+Service file:
+
+Example 
+================================================================
+# $Id: airspyhfd@.service,v 1.3 2023/01/15 05:07:27 karn Exp $
+# Systemd service file for KA9Q's airspyhfd daemon
+# Phil Karn, KA9Q, May 2022
+
+[Unit]
+Description=AirspyHF-%i daemon
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+User=airspy
+AmbientCapabilities=CAP_SYS_NICE
+SupplementaryGroups=plugdev radio
+Type=simple
+PermissionsStartOnly=true
+RuntimeDirectory=airspyhfd-%i
+RuntimeDirectoryMode=0755
+ReadWritePaths=/var/lib/ka9q-radio
+ExecStart=/usr/local/sbin/airspyhfd %i
+PIDFile=/run/airspyhfd-%i/pid
+Restart=always
+RestartSec=5
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target
+==================================================================
+Rules file:
+
+ATTR{idVendor}=="03eb", ATTR{idProduct}=="800c", SYMLINK+="airspyhf-%k", MODE="660", GROUP="plugdev"
+
+
+
