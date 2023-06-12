@@ -35,9 +35,9 @@ In this case, this configuration file is invoked as:  ./rx888d g5rv
   
 or, as a services, as:  
 
-...
+```
 systemctl start rx888d@g5rv.service  
-...
+```
 
 About the fields:  
 
@@ -81,13 +81,15 @@ More than one configuration
   
 It is possible to have more than one configuration within this .conf file.  For example, if you were experimenting with different gain values, antennas, or sample rates, you could define such.  For example, if you wanted to have a section called "[dipole]", you would simply repeat the configuration under the [g5rv] section and make the desired changes, and when you invoked it you would simply substitute "g5rv" for "dipole" as follows:  
  
-...
+```
 ./rx888d dipole  
-...  
+```
+
 or, as a services, as:  
-...  
+
+```  
 systemctl start rx888d@dipole.service  
-...  
+```  
 
 ---
 
@@ -162,7 +164,6 @@ For example, if we were do demodulate, individually, every WSPR, FT-8, FT-4, SST
 In the sections of the radiod .conf file after the [global] section we can define virtual receivers individually - or as groups of receivers of similar content.  Consider the following example from the same "radiod@hf.conf" file:  
   
 ```
-
 [WWV]  
 data = wwv-pcm.local  
 mode = am  
@@ -257,6 +258,8 @@ As mentioned above, on amateur radio the mode that we call "FM" is really "PM"
 On the receive end, the highs are "un-boosted" by precisely the same amount as they were boosted on transmit.  By doign this we not only restore the frequency response to its original level ("PM" audio on a "true" FM receiver sounds very tinny and shrill) but as the signal gets weaker and the noise appears in the high frequency audio, this, too, is reduced - improving the apparent signal-noise of the signal.  
   
 Within the modes.conf file we see the following entry for PM - which, again, is the mode that we use on VHF and UHF: 
+
+
 ```
 [pm]  
 demod = fm  
@@ -320,6 +323,7 @@ It may seem to be a bit confusing to have the default for "fm" actually being ap
 
   
 Now let's look at a USB mode definition:  
+
 ```
 [usb]  
 demod = linear  
