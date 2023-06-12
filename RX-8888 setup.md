@@ -34,9 +34,11 @@ In the above we see the heading of the section [g5rv]:  This name is arbitrary 
 In this case, this configuration file is invoked as:  ./rx888d g5rv  
   
 or, as a services, as:  
-  
+
+...
 systemctl start rx888d@g5rv.service  
-  
+...
+
 About the fields:  
 
 - description - It's recommended that you include a description of the purpose of this definition.  Question:  Is this field used anywhere else?
@@ -78,13 +80,14 @@ About the fields:
 More than one configuration  
   
 It is possible to have more than one configuration within this .conf file.  For example, if you were experimenting with different gain values, antennas, or sample rates, you could define such.  For example, if you wanted to have a section called "[dipole]", you would simply repeat the configuration under the [g5rv] section and make the desired changes, and when you invoked it you would simply substitute "g5rv" for "dipole" as follows:  
-  
+ 
+...
 ./rx888d dipole  
-  
+...  
 or, as a services, as:  
-  
+...  
 systemctl start rx888d@dipole.service  
-  
+...  
 
 ---
 
