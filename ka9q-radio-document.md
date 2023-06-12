@@ -1,7 +1,7 @@
 
 # Overview and Module documentation of ka9q-radio
 
-## By Dave Larsen, KV0S
+by Dave Larsen, KV0S
 
 ---
 
