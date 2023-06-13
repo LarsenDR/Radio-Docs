@@ -124,7 +124,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![Alt text](https://github.com/LarsenDR/Radio-Docs/blob/main/rx-888mkii.png "rx-888 MKII")
+![Alt text](https://github.com/LarsenDR/Radio-Docs/blob/main/rx-888-MKII.png "rx-888 MKII")
 
  - LTC2208 16bit ADC @ 130 MSPS
  - Dual RF input
