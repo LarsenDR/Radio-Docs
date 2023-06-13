@@ -103,6 +103,21 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
+ - 1 MHz to 6 GHz operating frequency
+ - half-duplex transceiver
+ - up to 20 million samples per second
+ - 8-bit quadrature samples (8-bit I and 8-bit Q)
+ - compatible with GNU Radio, SDR#, and more
+ - software-configurable RX and TX gain and baseband filter
+ - software-controlled antenna port power (50 mA at 3.3 V)
+ - SMA female antenna connector
+ - SMA female clock input and output for synchronization
+ - convenient buttons for programming
+ - internal pin headers for expansion
+ - Hi-Speed USB 2.0
+ - USB-powered
+ - open source hardware
+
 #### Resources
 
 #### Drivers
@@ -118,6 +133,10 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### References [funcube_dongle](http://www.funcubedongle.com/)
 
+ - Frequency range: 64-1,700MHz.  
+ - Upper frequency: limit is beyond 2,000MHz, about 1,100MHz and 1,270MHz. 
+ - Bandwidth: 96kHz is the quadrature sampling rate. 
+ - Sensitivity:  0.15uV for 12dB SINAD NBFM at 145MHz and 435MHz.
 
 #### Hardware description
 
