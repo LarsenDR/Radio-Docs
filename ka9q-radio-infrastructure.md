@@ -1,14 +1,14 @@
 
-# Overview and Module documentation of ka9q-radio
+# Documentation of ka9q-radio
 
 by Dave Larsen, KV0S
 
 ---
 
 
-# Inferstructure
+# Infrastructure
 
-This is a list of the iq radio infastructure that are currently used with the ka9q-radio software.
+This is a list of the iq radio infrastructure that are currently used with the ka9q-radio software.
 
 ---
 
