@@ -34,7 +34,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![Alt text](https://github.com/LarsenDR/Radio-Docs/blob/main/airspy.png "airspy")
+![airspy](/images/airspy-sm.png)
 
  - Continuous 24 – 1700 MHz native RX range 
  - 3.5 dB NF between 42 and 1002 MHz
@@ -61,7 +61,8 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![Alt text](https://github.com/LarsenDR/Radio-Docs/blob/main/airspyHF.png "airspyHF")
+
+![airspyHF](/images/airspyHF-sm.png)
 
  - HF coverage between 9 kHz .. 31 MHz
  - VHF coverage between 60 .. 260 MHz
@@ -85,7 +86,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![Alt text](https://github.com/LarsenDR/Radio-Docs/blob/main/hackrf.png "hackrf")
+![airspyHF](/images/hackrf-sm.png)
 
 #### Resources
 
@@ -105,7 +106,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![Alt text](https://github.com/LarsenDR/Radio-Docs/blob/main/funcube-dongle.png "funcube-dongle")
+![funcube-dongle](/images/funcube-dongle-sm.png)
 
 #### Resources
 
@@ -124,7 +125,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![Alt text](https://github.com/LarsenDR/Radio-Docs/blob/main/rx-888-MKII.png "rx-888 MKII")
+![rx-888-MKII](/images/rx888mkii-sm.png)
 
  - LTC2208 16bit ADC @ 130 MSPS
  - Dual RF input
