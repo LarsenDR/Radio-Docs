@@ -6,9 +6,9 @@ by Dave Larsen, KV0S
 ---
 
 
-# Services
+# Inferstructure
 
-This is a list of the iq radio services that are currently used with the ka9q-radio software.
+This is a list of the iq radio infastructure that are currently used with the ka9q-radio software.
 
 ---
 
