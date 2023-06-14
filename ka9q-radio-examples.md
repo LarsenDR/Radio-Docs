@@ -8,7 +8,7 @@ by Dave Larsen, KV0S
 
 # Services
 
-This is a list of the iq radio services that are currently used with the ka9q-radio software.
+This is a list of the iq radio examples that are currently used with the ka9q-radio software.
 
 ---
 
