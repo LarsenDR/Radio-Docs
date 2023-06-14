@@ -6,7 +6,7 @@ by Dave Larsen, KV0S
 ---
 
 
-# Services
+# Examples
 
 This is a list of the iq radio examples that are currently used with the ka9q-radio software.
 
