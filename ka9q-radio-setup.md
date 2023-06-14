@@ -94,6 +94,7 @@ After installing and building ka9q-radio, run the following commands (sudo may b
 mkdir /var/lib/ka9q-radio                                   Note:  This may fail if it already exists
 chown <username> /var/lib/ka9q-radio               Substitute the user name under which you are running "ka9q-radio"
 ```
+!!! Inconsistencies in this text !!!
 
 It may be worth verifying that /var/lib/ka9q-radio/wisdom is "owned" by the user running "ka9q-radio".
 
@@ -132,5 +133,7 @@ time fftwf-wisdom -v -T 1 -o nwisdom rof500000 cof36480 cob1920 cob1200 cob960 c
 This program may take some time to run - from just a few minutes on a fairly fast computer to several hours on a much slower computer, so be patient!
 
 When done, a file called "nwisdom" will be placed in the ka9q-radio directory.  Go to the directory /etc/fftw and back up the file "wisdomf" (e.g. rename it to something else) and then copy the newly-created nwisdom file there, naming it as "wisdomf", making sure that it has the same permissions/user/group as the original "wisdomf" file.
+
+!!! Inconsistencies in this text !!!
 
 `
