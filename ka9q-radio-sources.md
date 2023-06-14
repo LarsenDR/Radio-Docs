@@ -1,5 +1,5 @@
 
-# Overview and Module documentation of ka9q-radio
+# Documentation of ka9q-radio
 
 by Dave Larsen, KV0S
 
@@ -16,7 +16,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![Alt text](https://github.com/LarsenDR/Radio-Docs/blob/main/rtl-sdr.png "rtl-sdr")
+[rtl-sdr](/images/rtl-sdr.png)
  
 #### Resources
 
