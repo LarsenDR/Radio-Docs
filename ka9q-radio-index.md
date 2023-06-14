@@ -12,7 +12,7 @@ This is a list of the iq radio infastructure that are currently used with the ka
 
 ## Overview
 
-[Overview](ka9q-radio-index.md)
+[Overview](/ka9q-radio-index.md)
 
 ## Index
 
