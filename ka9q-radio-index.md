@@ -10,37 +10,21 @@ by Dave Larsen, KV0S
 
 This is a list of the iq radio infastructure that are currently used with the ka9q-radio software.
 
-## Overview
-
 [Overview](/ka9q-radio-document.md)
 
-## Index
+[Index](/ka9q-radio-index.md)
 
-[Overview](/ka9q-radio-index.md)
+[Infrastructure](/ka9q-radio-infrastructure.md)
 
-## Infrastructure
+[Setup](/ka9q-radio-setup.md)
 
-[Overview](/ka9q-radio-infrastructure.md)
+[Examples](/ka9q-radio-examples.md)
 
-## Setup
+[Sources](/ka9q-radio-sources.md)
 
-[Overview](/ka9q-radio-setup.md)
+[Services](/ka9q-radio-services.md)
 
-## Examples
-
-[Overview](/ka9q-radio-examples.md)
-
-## Sources
-
-[Overview](/ka9q-radio-sources.md)
-
-## Services
-
-[Overview](/ka9q-radio-services.md)
-
-## Sinks
-
-[Overview](/ka9q-radio-sinks.md)
+[Sinks](/ka9q-radio-sinks.md)
 
 
 
