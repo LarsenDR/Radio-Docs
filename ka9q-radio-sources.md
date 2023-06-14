@@ -86,7 +86,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![airspyHF](/images/hackrf-sm.png)
+![hackrf](/images/hackrf-sm.png)
 
 #### Resources
 
@@ -125,7 +125,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Hardware description
 
-![rx-888-MKII](/images/rx888mkii-sm.png)
+![rx-888-MKII](/images/rx-888-MKII-sm.png)
 
  - LTC2208 16bit ADC @ 130 MSPS
  - Dual RF input
