@@ -12,7 +12,61 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ---
 
+### aprs
 
+### aprsfeed
+
+### control
+
+### cwd 
+
+### ft8-decodeed
+
+### iqplay
+
+### iqrecord
+
+### metadump
+
+### modulate
+
+### monitor
+
+### radio
+
+### opussend
+
+### packetd
+
+### pcmcat
+
+### pcmsend
+
+### pcmrecord
+
+### pcmspawn
+
+### pl
+
+### powers
+
+### radiod
+
+### rdsd
+
+### rtlsdrd
+
+### setfilt
+
+### show_pkt
+
+### show_sig
+
+### stereod
+
+### tune
+
+### wspr-decoded
 
 
 # References
