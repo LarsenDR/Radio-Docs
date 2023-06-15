@@ -3,8 +3,6 @@
 
 by Dave Larsen, KV0S
 
----
-
 
 # Index
 
@@ -45,7 +43,6 @@ Programs to collect or store radio output.
 
 # References
 
----
 
 **Karn, Phil**, KA9Q (karn@ka9q.net) 2018. [Realtime Multicast for SDR Module Interconnection](https://tapr.org/40th-annual-arrl-and-tapr-digital-communications-conference/). 37th ARRL and TAPR Digital Communications Conference, Albuquerque, New Mexico.
 
