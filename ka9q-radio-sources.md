@@ -24,10 +24,27 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Configuration
 
+```
+[2m]
+#rtl-sdr example conf file
+#device = 0
+calibration = -2.775e-6
+iface = eth0
+#hold-open = true
+#tos = 48
+#data-ttl = 0
+#status-ttl = 1
+#blocksize = 3840
+description = 2m vertical
+#ssrc = 0
+status = 2m-antenna-status.local
+data = 2m-antenna-data.local
+```
+
 #### Outputs
 
 
-# airspy
+# airspy R2
 
 #### References [airspy.com](https://airspy.com/)
 
@@ -51,6 +68,42 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Configuration
 
+```
+# sample entry for airspy R2
+[example]
+description = "2m vertical"
+serial = 91d064dc27839fcf
+
+iface = eth0               ; force primary interface, avoid wifi
+status = 2m-vertical.local
+#status-ip = 239.1.1.1     ; default is hash of domain name
+#status-ttl = 1            ; default
+
+data = 2m-vertical-data.local
+#data-ip = 239.1.1.2       ; default is hash of domain name
+#data-ttl = 0              ; default
+#blocksize = 960           ; default 960 when data-ttl > 0
+#tos = 48                  ; IP ToS
+#ssrc = 1234               ;default is based on time
+
+# software agc (preferred)
+#agc-high-threshold = -10   ;dBFS, default
+#agc-low-threshold = -40    ;dBFS, default
+
+# hardware settings
+#sample-rate = 20000000    ; default is highest available
+#bias = 0                  ; default no preamp
+linearity = 1              ; default is off
+#lna-agc = 0
+#mixer-agc = 0
+#lna-gain = 0
+#mixer-gain = 0
+#vga-gain = 5
+#gainstep = 21             ; manual gain setting: 0-21, 21=maximum
+
+#frequency = 148m8         ; locks tuner when manually set
+```
+
 #### Outputs
 
 # airspyHF
@@ -73,9 +126,28 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 airspyhfd - a ka9q-radio driver program
 
-Firmware - 
-
 #### Configuration
+```
+# sample entry for airspyHF+
+[example2]
+#samprate 912000           ; default
+description = G5RV
+serial = 3B52AA8090A12535  ; use airspy_info program from airspy.com to finded the serial number
+iface = eth0               ; force primary interface, avoid wifi
+status = g5rv.local
+data = g5rv-data.local
+hf-agc = 0
+agc-thresh = 0
+hf-att = 0;
+hf-lna = 0
+lib-dsp = 1
+data-ttl = 0
+status-ttl = 1
+blocksize = 2048 # default for data-ttl = 0
+#ssrc            # generated from time of day
+tos = 48
+frequency = 10000000  # default
+```
 
 #### Outputs
 
