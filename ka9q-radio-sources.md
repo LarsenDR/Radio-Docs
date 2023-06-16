@@ -8,7 +8,7 @@ by Dave Larsen, KV0S
 
 This is a list of the iq radio sources that are currently used with the ka9q-radio software.
 
----
+
 
 # rtl-sdr
 
@@ -26,7 +26,6 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Outputs
 
----
 
 # airspy
 
@@ -53,8 +52,6 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Outputs
 
----
-
 # airspyHF
 
 ####References [airspyHF](https://airspy.com/airspy-hf-discovery/)
@@ -77,9 +74,6 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Outputs
 
-
----
-
 # hackrf
 
 #### References [hackrf](https://greatscottgadgets.com/hackrf/one/)
@@ -96,9 +90,6 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Outputs
 
-
----
-
 # funcube_dongle
 
 #### References [funcube_dongle](http://www.funcubedongle.com/)
@@ -109,15 +100,13 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 ![funcube-dongle](/images/funcube-dongle-sm.png)
 
 #### Resources
+ka9q-radio-sources.md
 
 #### Drivers
 
 #### Configuration
 
 #### Outputs
-
-
----
 
 # RX888MKII
 
@@ -147,7 +136,6 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Outputs
 
----
 # sockbuf
 
 #### References
@@ -162,8 +150,6 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Outputs
 
-
----
 
 # SDRplay
 
@@ -194,9 +180,6 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 #### Configuration
 
 #### Outputs
-
-
----
 
 # Horus
 
