@@ -12,6 +12,8 @@ Phil Karn ka9q, develop---ed a set of software defined radio receiver modules to
 
 ![Example flow diagram](images/ka9q-radio-image.png)
 
+##### by Phil Karn ka9q
+
 # Multicast
 
 It's taken quite a beating in recent years, but I’m old fashioned enough to still believe in the “UNIX Philosophy”: each program should do one thing and do it well, with simple interfaces that can be used in novel ways the author may not have anticipated. The UNIX ‘pipeline’ was a seminal IPC (inter-process communication) scheme later extended to the Internet by TCP/IP.
