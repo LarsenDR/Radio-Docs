@@ -3,14 +3,14 @@
 
 by Dave Larsen, KV0S
 
----
+
 
 # Overview
 
-Phil Karn ka9q, developed a set of software defined radio receiver modules to demonstrate the utility of standard Internet real-time and multicast protocols for interprocess communication. The multicast streams convey complex digital IF sample streams, uncompressed and compressed audio and decoded physical layer frames (e.g., AX.25). One module can feed any number of others, and it is easy to move and restart individual modules without restarting the entire system. The package is currently being used for general analog reception and to process balloon APRS tracking transmissions but has many other applications including satellite operations and digital voice. The source code is in C, is available as open source 1 and runs on any UNIX-like operating system, including Mac OSX and Linux on Intel/ AMD x86 and ARM (e.g., Raspberry Pi) systems.
+Phil Karn ka9q, develop---ed a set of software defined radio receiver modules to demonstrate the utility of standard Internet real-time and multicast protocols for interprocess communication. The multicast streams convey complex digital IF sample streams, uncompressed and compressed audio and decoded physical layer frames (e.g., AX.25). One module can feed any number of others, and it is easy to move and restart individual modules without restarting the entire system. The package is currently being used for general analog reception and to process balloon APRS tracking transmissions but has many other applications including satellite operations and digital voice. The source code is in C, is available as open source 1 and runs on any UNIX-like operating system, including Mac OSX and Linux on Intel/ AMD x86 and ARM (e.g., Raspberry Pi) systems.
 
 
-![Example flow diagram](ka9q-radio-image.png)
+![Example flow diagram](images/ka9q-radio-image.png)
 
 # Multicast
 
@@ -26,11 +26,10 @@ choices -- standardizing just enough and no more -- led to the Internet's near-u
 
 IP is more flexible than GNU Radio’s IPC but it is also more costly. It would be wasteful to have a UDP/IP link from an oscillator to a multiplier (mixer) and another from the mixer to a detector, for example. But it can be used quite effectively at higher levels, e.g., from an SDR front end to a software tuner/demodulator, or from a tuner/demodulator to various recording and digital decoder programs. GNU Radio itself could receive, process and/or generate multicast IP streams, as could decoding programs like FLDIGI and WSJTX without relying on kludges like “virtual audio cables”. IP multicasting is especially useful for status and control messages so everyone can see what's going on.
 
----
+
 
 # References
 
----
 
 **Karn, Phil**, KA9Q (karn@ka9q.net) 2018. [Realtime Multicast for SDR Module Interconnection](https://tapr.org/40th-annual-arrl-and-tapr-digital-communications-conference/). 37th ARRL and TAPR Digital Communications Conference, Albuquerque, New Mexico.
 
