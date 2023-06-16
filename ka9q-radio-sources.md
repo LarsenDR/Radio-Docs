@@ -45,6 +45,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
  - 80 MSPS when using custom firmware
 
 #### Resources
+---
 
 #### Drivers
 
@@ -54,7 +55,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 # airspyHF
 
-####References [airspyHF](https://airspy.com/airspy-hf-discovery/)
+#### References [airspyHF](https://airspy.com/airspy-hf-discovery/)
 
 #### Hardware description
 
@@ -82,7 +83,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 ![hackrf](/images/hackrf-sm.png)
 
-#### Resources
+### Resources
 
 #### Drivers
 
@@ -91,6 +92,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 #### Outputs
 
 # funcube_dongle
+---
 
 #### References [funcube_dongle](http://www.funcubedongle.com/)
 
@@ -99,8 +101,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 ![funcube-dongle](/images/funcube-dongle-sm.png)
 
-#### Resources
-ka9q-radio-sources.md
+### Resources
 
 #### Drivers
 
@@ -132,9 +133,36 @@ ka9q-radio-sources.md
 
 #### Drivers
 
+rx888d - a ka9q-radio driver program
+
+Firmware - ka9q-radio/SDDC_FX3.img
+
 #### Configuration
 
+[g5rv]
+
+```
+# ka9q customized
+description = "G5RV RX888"
+firmware = SDDC_FX3.img
+samprate = 64800000    ;  2^8 * 3^4 * 5^5
+# needs fftw3 wisdom and/or fft-threads >= 4 and some buffer tuning
+# seems to lose data in the network path
+# forward FFT for 129,600,000 Hz, 20ms and overlap = 5 is 3240000
+#samprate = 129600000    ;  2^9 * 3^4 * 5^5
+iface = eth0               ; force primary interface, avoid wifi
+status = rx888-status.local
+data = rx888-pcm.local
+ssrc = 10
+;gain = 1.5 ; dB
+gain = 10 ;dB - near floor of NF curve, still not too high for my G5RV
+gainmode = high ; higher gain range
+```
+
+
 #### Outputs
+
+
 
 # sockbuf
 
@@ -196,9 +224,6 @@ ka9q-radio-sources.md
 #### Outputs
 
 
-
-
-#
 
 # References
 
