@@ -71,6 +71,10 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Drivers
 
+airspyhfd - a ka9q-radio driver program
+
+Firmware - 
+
 #### Configuration
 
 #### Outputs
