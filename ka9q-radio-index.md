@@ -4,37 +4,35 @@
 by Dave Larsen, KV0S
 
 
-# Index
-
 This is a list of the iq radio infastructure that are currently used with the ka9q-radio software.
 
-# [Overview](/ka9q-radio-document.md)
+## [Overview](/ka9q-radio-document.md)
 
 Descriptions of how this radio system works by interacting with you Linux base operating system and the multicast enabled wired network.  At this time ka9q-radio is NOT recommend for networks attaced to WiFi networks!
 
- # [Index](/ka9q-radio-index.md)
+## [Index](/ka9q-radio-index.md)
 
-[Infrastructure](/ka9q-radio-infrastructure.md)
+## [Infrastructure](/ka9q-radio-infrastructure.md)
 
 Help with configuring your computer and network infrastructure.
 
-[Setup](/ka9q-radio-setup.md)
+## [Setup](/ka9q-radio-setup.md)
 
 Descriptions of the radio and network addressing of the radio system.
 
-[Examples](/ka9q-radio-examples.md)
+## [Examples](/ka9q-radio-examples.md)
 
 Simple examples with all the piese you ne to implement each example.
 
-[Sources](/ka9q-radio-sources.md)
+## [Sources](/ka9q-radio-sources.md)
 
 Hardware radios that are currently supported by the ka9q-radio system.
 
-[Services](/ka9q-radio-services.md)
+## [Services](/ka9q-radio-services.md)
 
 Programs the are used to connect the parts of the radio system.
 
-[Sinks](/ka9q-radio-sinks.md)
+## [Sinks](/ka9q-radio-sinks.md)
 
 Programs to collect or store radio output.
 
