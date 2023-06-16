@@ -187,13 +187,7 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
     - +10dBm Short Duration
  - ADC Sample Rates 2MSPS – 10.66MSPS
  - ADC Number of Bits 14bit 2MSPS – 6.048MSPS
- - 12bit 6.048MSPS – 8.064MSPS
- - 10bit 8.064MSPS – 9.216MSPS
- - 8bit >9.216MSPS
- - Bias – T 4.7V
- - 100mA Guaranteed
- - Reference 0.5ppm 24MHz TCXO. 
- - Frequency error trimmable to 0.01ppm in field.
+ - 12bit 6.048MSPS – 8.064MSPS--- in field.
 
 #### Drivers
 
@@ -219,13 +213,13 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 #### Outputs
 
 
----
+
 
 #
 
 # References
 
----
+
 
 **Karn, Phil**, KA9Q (karn@ka9q.net) 2018. [Realtime Multicast for SDR Module Interconnection](https://tapr.org/40th-annual-arrl-and-tapr-digital-communications-conference/). 37th ARRL and TAPR Digital Communications Conference, Albuquerque, New Mexico.
 
