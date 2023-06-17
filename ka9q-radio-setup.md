@@ -43,7 +43,23 @@ At this point, take a look at the file in ka9q-radio called "INSTALL.txt" - link
 
 In short:
 
-sudo apt install build-essential libusb-1.0-0-dev libusb-dev libncurses5-dev libfftw3-dev libbsd-dev libhackrf-dev libopus-dev libairspy-dev libairspyhf-dev librtlsdr-dev libiniparser-dev libavahi-client-dev portaudio19-dev libopus-dev
+sudo apt install 
+
+build-essential 
+libusb-1.0-0-dev 
+libusb-dev 
+libncurses5-dev 
+libfftw3-dev 
+libbsd-dev 
+libhackrf-dev 
+libopus-dev 
+libairspy-dev 
+libairspyhf-dev 
+librtlsdr-dev 
+libiniparser-dev 
+libavahi-client-dev 
+portaudio19-dev 
+libopus-dev
 
 Note that some of these dependencies are hardware-specific, including:
 libhackrf-dev - HackRF
