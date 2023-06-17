@@ -20,7 +20,7 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ### cwd 
 
-### ft8-decodeed
+### ft8-decoded
 
 ### iqplay
 
@@ -31,8 +31,6 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 ### modulate
 
 ### monitor
-
-### radio
 
 ### opussend
 
@@ -52,9 +50,9 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ### radiod
 
-### rdsd
+radiod receives signals from the hardware specific recievers and creates the connections to the various post processing uses of the radio signals.
 
-### rtlsdrd
+### rdsd
 
 ### setfilt
 
