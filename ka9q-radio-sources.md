@@ -22,6 +22,8 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
 
 #### Drivers
 
+librtlsdr-dev 
+
 #### Configuration
 
 ```
@@ -65,6 +67,8 @@ data = 2m-antenna-data.local
 ---
 
 #### Drivers
+
+libairspy-dev 
 
 #### Configuration
 
@@ -124,7 +128,7 @@ linearity = 1              ; default is off
 
 #### Drivers
 
-airspyhfd - a ka9q-radio driver program
+libairspyhf-dev 
 
 #### Configuration
 ```
