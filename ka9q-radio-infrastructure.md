@@ -10,6 +10,12 @@ by Dave Larsen, KV0S
 
 This is a list of the iq radio infrastructure that are currently used with the ka9q-radio software.
 
+This radio must run on local wired network isolated from wireless networks, you will need a network switch that supports multicast.
+
+The radio can run on a single computer but works best distributed amoung serveral computers in a local network. 
+
+
+
 
 
 
