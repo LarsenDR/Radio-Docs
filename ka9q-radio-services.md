@@ -18,7 +18,11 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ### control
 
+A program that controls both the reciever specific program and the radiod program.
+
 ### cwd 
+
+A program to decode CW signals in a radio stream.
 
 ### ft8-decoded
 
@@ -26,11 +30,15 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ### iqrecord
 
+A program to record rare IQ streams to memory for later post processing.
+
 ### metadump
 
 ### modulate
 
 ### monitor
+
+A program that allows monitoring the signals as per the configuration file. 
 
 ### opussend
 
@@ -65,6 +73,7 @@ radiod receives signals from the hardware specific recievers and creates the con
 ### tune
 
 ### wspr-decoded
+A program to decode wspr packets. 
 
 
 # References
