@@ -163,6 +163,8 @@ frequency = 10000000  # default
 
 #### Drivers
 
+libhackrf-dev
+
 #### Configuration
 
 #### Outputs
