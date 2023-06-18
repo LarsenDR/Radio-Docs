@@ -1,7 +1,7 @@
 
 # Documentation of ka9q-radio
 
-by Dave Larsen, KV0S
+edit by Dave Larsen, KV0S
 
 
 # Sources
