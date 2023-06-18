@@ -1,7 +1,7 @@
 
 # Documentation of ka9q-radio
 
-by Dave Larsen, KV0S
+edited by Dave Larsen, KV0S
 
 
 This is a list of the iq radio infastructure that are currently used with the ka9q-radio software.
