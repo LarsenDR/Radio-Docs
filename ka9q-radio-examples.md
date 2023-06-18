@@ -1,7 +1,7 @@
 
 # Example use cases of ka9q-radio
 
-by Dave Larsen, KV0S
+edited by Dave Larsen, KV0S
 
 
 
