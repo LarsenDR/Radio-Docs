@@ -64,7 +64,7 @@ data = 2m-antenna-data.local
  - 80 MSPS when using custom firmware
 
 #### Resources
----
+
 
 #### Drivers
 
@@ -174,7 +174,7 @@ libhackrf-dev
 #### Outputs
 
 # funcube_dongle
----
+
 
 #### References [funcube_dongle](http://www.funcubedongle.com/)
 
