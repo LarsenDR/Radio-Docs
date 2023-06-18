@@ -14,6 +14,8 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ### aprs
 
+A APRS decoder 
+
 ### aprsfeed
 
 ### control
@@ -26,7 +28,11 @@ A program to decode CW signals in a radio stream.
 
 ### ft8-decoded
 
+A program to decode ft8 signals it is forked from the wspr-decoded code.
+
 ### iqplay
+
+A program to play IQ data stream
 
 ### iqrecord
 
@@ -69,6 +75,8 @@ radiod receives signals from the hardware specific recievers and creates the con
 ### show_sig
 
 ### stereod
+
+A program used with FM stereo signals
 
 ### tune
 
