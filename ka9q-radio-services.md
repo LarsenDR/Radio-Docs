@@ -14,7 +14,20 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ### aprs
 
-A program to decode APRS packets 
+A program to decode APRS packets
+
+- Usage:     aprs [-L latitude] [-M longitude] [-A altitude] [-s sourcecall] [-v] [-I mcast_address]
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- -L:  The latitude in dd.dd format.  Use positive for NORTH latitude and negative for SOUTH latitude (e.g. 32.860400, -38.35346)
+- -M:  The longtidude in dd.dd format.  Use positive for EAST longitude and negative for WEST longitude (e.g. 1.5323, -117.188900)
+- -A:  The altitude in meters (e.g. 0.000000)
+- -s:  The source callsign (Default:  null)
+- -R:  Destination IP address (Default:  127.0.0.1:4533)
+- -I:  Muilticast address with in the form of:  <aaa.bbb.ccc.ddd:s> with "s" being the ssrc of the source stream.  (Default: ax25.local:5004)
+- Source code says "Process AX.25 frames containing APRS data, extract lat/long/apltitude, compute az/el" - see "aprs.conf" for configuration - can be run as a service.
+
 
 ### aprsfeed
 
