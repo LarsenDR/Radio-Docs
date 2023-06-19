@@ -14,7 +14,7 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ### aprs
 
-A APRS decoder 
+A program to decode APRS packets 
 
 ### aprsfeed
 
