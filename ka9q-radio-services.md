@@ -14,7 +14,7 @@ This is a list of the iq radio services that are currently used with the ka9q-ra
 
 ### aprs
 
-A program to decode APRS packets
+A program to decode APRS packets.
 
 - Usage:     aprs [-L latitude] [-M longitude] [-A altitude] [-s sourcecall] [-v] [-I mcast_address]
 
@@ -31,6 +31,19 @@ A program to decode APRS packets
 
 ### aprsfeed
 
+A program to upload APRS recived packets to a Tier2 server.
+
+- Usage:     aprsfeed -u user [-p passcode] [-v] [-I mcast_address][-h host]
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- -u:  User
+- -p:  Passcode
+- -h:  Host  (Default:  noam.aprs2.net)
+- -I:  Multicast address (Default:  ax25.mcast.local)
+- Source code says "Process AX.25 frames containing APRS data, feed to APRS2 network"" - see "aprs.conf" for configuration - can be run as a service.
+
+
 ### control
 
 A program that controls both the reciever specific program and the radiod program.
@@ -38,6 +51,19 @@ A program that controls both the reciever specific program and the radiod progra
 ### cwd 
 
 A program to decode CW signals in a radio stream.
+
+- Usage:    cwd [-v] [-I fifo_name] [-s ssrc] -R mcast_group [-S speed_wpm] [-P pitch_hz] [-L level16]
+
+The parameters and their defaults are:
+- -v:  Verbose mode
+- -I:  FIFO name (Default:  "/run/cw/input")
+- -s:  ssrc of on multicast address
+- -R:  Receive multicast address
+- -S:  Speed in words-per-minute (WPM) (Default:  18.0 WPM)
+- -P:  Pitch in Hz (Default:  500.0 Hz)
+- -L:  CW Level in dB (Default:  -29.0 dB)
+- This is a CW decoder - it may be run as a service, see "cwd.service".
+
 
 ### ft8-decoded
 
