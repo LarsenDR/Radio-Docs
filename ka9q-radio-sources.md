@@ -50,9 +50,9 @@ Comments:
 - This ability to manually set the gain of the R820T frequency converter.
 - It is useful to set the gain of the RTL-SDR manually in the following scenario:  In many metropolitan areas, there can be repeaters with signal levels that are >-50 dBm.  As the AGC action of the RTL-SDR will naturally set the gain to maximum in the presence of strong signals, when a signal greater than approximately -65 dB appears in the passband, the receiver will briefly overload prior to the AGC action occurring.  This causes two effects:
  - All signals being received will be briefly disrupted due to overload.  For voice monitoring, this causes an audible "click", but for AX.25 packet operation, this will probably cause the loss of the entire packet.
- - Weaker signals will seem to appear and disappear depending on the current AGC-derived gain setting, the depth of gain reduction due to AGC action and the strength of the weak signals.  This issue is unavoidable due to the limited dynamic range of the RTL-SDR's 8 bit A/D, but a fixed gain setting would provide consistency.
- - It would also be useful to limit how high the AGC gain could go in the absence of other signals.
- - In practice, the manual gain could be set for the user's RF environment emperically - by listening to signals when the strongest local transmitters (e.g. repeaters) are active and/or observing the A/D's peak "dbFS" reading using the control program.
+ - Indented Weaker signals will seem to appear and disappear depending on the current AGC-derived gain setting, the depth of gain reduction due to AGC action and the strength of the weak signals.  This issue is unavoidable due to the limited dynamic range of the RTL-SDR's 8 bit A/D, but a fixed gain setting would provide consistency.
+ - Indented It would also be useful to limit how high the AGC gain could go in the absence of other signals.
+ - Intented In practice, the manual gain could be set for the user's RF environment emperically - by listening to signals when the strongest local transmitters (e.g. repeaters) are active and/or observing the A/D's peak "dbFS" reading using the control program.
 
 #### Drivers
 
