@@ -71,18 +71,18 @@ This program allows a virtual receiver to be controlled, created or disabled und
 
 - If you wish to disable a receiver, tune its frequency to "0" and exit.
 
-** Using "control":
+** Using "control": **
 
 The control program can tune, create or disable a virtual receiver.  In the example above, if we had specified "1234" as the SSRC - and we knew that this wasn't defined as a receiver within our configuration file (radiod@hf.conf) we could summon a receiver into existence.
 
 When started you will see a text-based control screen that shows the current receiver configurations and status and pressing "h" will show the list of available commands.
 
-IMPORTANT:
+**IMPORTANT:**
 - The system "locale" setting will determine how the interactive display of this program is rendered - see the file "/docs/notes.md" for more details.  For example, from the command line "export LANG=en_US.UTF-8" is known to work and is likely the default for systems set up for use in the U.S.
 - Virtual receivers running under "radiod" can only be tuned within the constraints of the hardware.  For example, in the case of "radiod@hf.conf" using the RX8888 - where our sample rate is 64.8 - - MHz - we can reasonably expect to be able to tune to no more than half that frequency (e.g. it essentially covers 0-30 MHz - all of HF).  Because we are using direct sampling - that is, inhaling the entire HF spectrum, we can tune anywhere in the range that our sample rate (and any antenna path filtering) allows.
 - If we used receiver hardware such as the RTL-SDR - which is a not direct-sampling receiver - our tuning range is constained.  If we have our RTL-SDR local oscillator tuned to 100 MHz and are operating with a sample rate of 2 MHz we can tune only over a 2 MHz span centered at 100 MHz - that is, 99-101 MHz.  To tune outside that range would require retuning the receiver's local oscillator - and if there are other receivers defined that require the local oscillator tuned to 100 MHz, moving it may place the received signal outside the 2 MHz range defined by our sample rate
 
-** Overview of main display screen:
+** Overview of main display screen:**
 
 - Using the 5 MHz WWV example with "radiod@hf.conf" and the RX888 for our example, in the upper half of the screen on the left side we see:
 - Carrier - This is where the receiver is tuned - 5 MHz in this case
@@ -101,7 +101,7 @@ IMPORTANT:
 - AGC Off - AGC (Automatic Gain Control) is that feature which keeps the received audio level constant despite the RF signal varying.
 - AGC On - This is underlined, showing that the AGC is on.
 
-** In the right-center column we see:
+** In the right-center column we see:**
 - G5RV RX888 - This shows the receiver configuration name ("G5RV" in this case) and the receiver type ("RX888") currently in use as defined in the .conf files.
 - A Gain - Not known at this time.
 - A/D  - This shows the total input power applied to the A/D converter relative to full-scale "dbFS".  A reading of "0" would likely indicate overload.  Under normal conditions, a reading of -10 or lower assures that brief overload events (e.g. noise peaks, lightning crashes, simultaneous signal peaks) are unlikely to happen:  Overloads can never be completely be avoided and if they are a very small proportion of the total, they are unlikely to cause degradation of received signals - particularly if their bandwidth is a tiny portion of the A/D sample rate.
@@ -116,7 +116,7 @@ IMPORTANT:
 - Output - This is effectly the audio output level of the virtual receiver: It should be confortably below 0 dBFS (full-scale)
 - Headroom - This is the "headroom" setting within the mode definition in "modes.conf"
 
-** In the far-right column:
+** In the far-right column:**
 - Threshold - This is the AGC threshold, defined in modes.conf
 - Recovery rate - This is the AGC recovery rate, defined in modes.conf
 - Hang time - This is the AGC "hang" time, defined in modes.conf
@@ -131,7 +131,7 @@ IMPORTANT:
 - Kaiser beta - This is related to the windowing function used in the FFT.
 - Drops - The number of dropped samples
 
-** In the center column we see:
+** In the center column we see:**
 - Time and date
 - Information about our server
 - The current multicast control address/port
@@ -142,7 +142,7 @@ IMPORTANT:
 - drops - The number of known-dropped packets from the receiver hardware
 - dupes - The number of known duplicated packets from the receiver hardware
 
-** In the left column we see:
+** In the left column we see:**
 - Information about our virtual receiver server/stream:  It could be a different server than that to which the receive hardware is connected
 - stat pkts - Number of packets conveying virtual receiver status
 - ctl pkts - Number of packets used to control our virtual receiver
@@ -196,14 +196,57 @@ The parameters and their defaults are:
 ### ft8-decoded
 
 A program to decode ft8 signals it is forked from the wspr-decoded code.
+  
+- Usage:    ft8-decoded [-L locale] [-v] [-k] [-d recording_dir] -t [cycle_time] -c [decode_command] -l [transmission_length] PCM_multicast_address
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- -k:  Keep .wav file after cycle (this can fill up your drive very quickly unless managed!)
+- -t:  Cycle time in seconds.  Examples:  15 for FT-8, 120 for WSPR
+- -c:  Decode command.  (Default:  "decode_ft8 %s")
+- -d:  Specify directory into which subdirectories of recordings will be placed.
+- -L:  System locale
+- PCM_multicast_address:  This is the multicast group address of the receiver/frequencies defined in the relevant radio.conf file.
+
+This will decode FT8 transmissions on the defined streams - Can be run as a service.
+
+Requires "decode_ft8" to work - possibly that from:  https://github.com/kgoba/ft8_lib - but in testing, I can't get it to execute, so I'm clearly missing something
+
 
 ### iqplay
 
 A program to play IQ data stream
+  
+ - Usage:    iqplay [-v] [-A iface] [-D output] [-R status] [-S ssrc] [-p TOS] [-T ttl] [-b blocksize] [-f frequency] <filename>
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- -A:  Default interface (e.g. Eth0)
+- -D:  Output multicast address
+- -R:  Status  (Default:  Uses time for "gps_time_sec()")
+- -S:  ssrc of produced multicast stream
+- -p:  IP Type of Service
+- -T:  Multicast Time-To-Live
+- -b:  Block size
+- -f:  Frequency, in Hz - used to indicate the frequency when "STDIN" is used, or if there's no tag on the file
+
+Source code says:  "Read from IQ recording, multicast in (hopefully) real time"
+ 
 
 ### iqrecord
 
 A program to record rare IQ streams to memory for later post processing.
+  
+- Usage:    iqrecord multicast_addr -S status_addr [-r samp_rate] [-d duration_sec] [-D dir_name] [-l locale] [-d duration] [-q] [-v]
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- -q:  Quiet mode (Suppress display)  (Default off - Do not suppress display)
+- -r:  Sample Rate
+- -d:  Duration, in seconds
+- -D:  Directory name
+- -l:  Locale
+- -S:  Status address 
 
 ### metadump
 
