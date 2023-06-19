@@ -65,13 +65,11 @@ data = 2m-antenna-data.local
 
 #### Resources
 
-airspyd
-
-Usage:    airsply [-v] [-f config_file]
+**Usage:    airsply [-v] [-f config_file]**
 
 The parameters and their defaults are:
--v:  Verbose mode
--f:  Config file.  (Default:  "/etc/radio/airspyd.conf")
+ - -v:  Verbose mode
+ - -f:  Config file.  (Default:  "/etc/radio/airspyd.conf")
 If you are testing various configurations of airspyd and you are not running it as a service, it is recommended that you copy the original "airspyd.conf", rename it to something else (e.g. "airspyd_test.conf" and invoke that test file with the command line parameter of "-f airspyd_test.conf".
 This reads from the Airspy SDR, sending status and accepting control commands via its UDP socket - can be run as a service.  Example needed.
 
