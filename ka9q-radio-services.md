@@ -265,7 +265,10 @@ A program to record rare IQ streams to memory for later post processing.
 **Sample output text:**
 
 Fri 16 Jun 2023 08:10:56.334738 rxtestsvr:36411 CMD : (1) cmd tag 5bf1bbe7
-Fri 16 Jun 2023 08:10:56.334770 rxtestsvr:49475 STAT: (1) cmd tag 5bf1bbe7 (2) commands 162,127 (3) Fri 16 Jun 2023 08:10:56.334755 (4) G5RV RX888 (16) out data src rxtestsvr:37291 (17) out data dst 239.10.102.92:5004 (18) out SSRC 10 (19) out TTL 0 (10) in samprate 64,800,000 Hz (22) out data pkts 481,901,289 (21) out metadata pkts 162,128 (97) rf atten 0.0 dB (98) rf gain 10.0 dB (33) RF 0.000 Hz (48) demod 0 (linear) (20) out samprate 64,800,000 Hz (49) out channels 1 (32) direct conv 1 (39) filt low 0 Hz (40) filt high 3.0456e+07 Hz (82) output bits/sample 16
+  
+Fri 16 Jun 2023 08:10:56.334770 rxtestsvr:49475 STAT: (1) cmd tag 5bf1bbe7 (2) commands 162,127 (3) 
+
+Fri 16 Jun 2023 08:10:56.334755 (4) G5RV RX888 (16) out data src rxtestsvr:37291 (17) out data dst 239.10.102.92:5004 (18) out SSRC 10 (19) out TTL 0 (10) in samprate 64,800,000 Hz (22) out data pkts 481,901,289 (21) out metadata pkts 162,128 (97) rf atten 0.0 dB (98) rf gain 10.0 dB (33) RF 0.000 Hz (48) demod 0 (linear) (20) out samprate 64,800,000 Hz (49) out channels 1 (32) direct conv 1 (39) filt low 0 Hz (40) filt high 3.0456e+07 Hz (82) output bits/sample 16
 
 In the above example we have queried the output stream from an instance of rx888d and can divine the following information about it:
 
