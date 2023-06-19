@@ -308,6 +308,35 @@ libhackrf-dev
 
 #### Resources
 
+- Usage:    rx888d [-v] [-f config_file]
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- -f:  Configuration file (Default:  "/etc/radio/rx888d.conf")
+- If you are testing various configurations of rx888d and you are not running i- t as a service, it is recommended that you copy the original "rx888d.conf", rename it to something else (e.g. "rx888d_test.conf" and invoke that test file with the command line parameter of "-f rx888d_test.conf".
+- This reads from an RX-888 SDR, sending status and accepting control commands via its UDP socket - Can be run as a service.
+
+The following parameters are used in the .conf file:
+- firmware - This parameter specifies the name of the firmware file loaded into the RX-888.  There is no default, but the file "SDDC_FX3.img" is most commonly-used.
+- queuedepth - (default = 16)
+- reqsize - (default = 8)
+- dither - This enables internal dithering of the A/D converter (default = 0)
+- rand - This enables the "randomization" of the A/D converter's output (default = 0)
+- att - The amount of attenuation in the receive signal path.  Range is 0 - 31.5 dB (default = 0)
+- gainmode - This sets the gain mode as "low" or "high" (default = "high")
+- gain - This sets the gain in the singal path.  Range is 0-34.0 dB (default = "1.5")
+- samprate - This sets the A/D converter sample rate.  The minimum is 1000000 (1 Msps) - Useful maximum is around 130 Msps.  (default = 32000000)
+- data-ttl - The data (RTP) multicast time-to-live (default = 0)
+- status -ttl - The metatdata multicast time-to-live (default = 1)
+- blocksize - The block size used for processing  (default selected automatically)
+- description - This is a text description of the receiver - used in metadata.  This often describes the receiver, its purpose and/or antenna.  (default = null)
+- ssrc - The ssrc of the RTP data.  (default selected automatically)
+- tos - Type of IP service (default = 48  AF12<<2)
+- data - The hostname of the RTP multicast stream (default = "rx888-pcm.local")
+- status - The hostname of the metadata multicast stream (default = "rx888-status.local")
+- iface - The default interface used for multicast data - typically "lo" (loopback) or "etho0".  (default = null)
+
+
 #### Drivers
 
 rx888d - a ka9q-radio driver program
