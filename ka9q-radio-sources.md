@@ -75,14 +75,14 @@ This reads from the Airspy SDR, sending status and accepting control commands vi
 
 The default configuration for airspyd may be found in the file airspyd.conf  - but note that the working version of this file will be found in /etc/radio  - so if you make any changes, you'll need to do so there, likely requiring sudo to edit it.  Also note that at the current time, if you reinstall/update ka9q from the .git, the configuration files in ~/ka9q-radio and /etc/radio will be overwritten.
 
-See "airspy.conf" for configuration example.
+See "airspy.conf" for configuration example below.
 
 Parameters used in the ".conf" file with "airspyd":
-serial - Serial number of the Airspy device (default = null)
-samprate - Sample rate
-lna-agc - This enables/disables the AGC on the RF front end.  (default = 0)
-mixer-agc - This enables/disables the AGC associated with the mixer.  (default = 0)
-lna-gain -  This adjusts the RF front end gain (default = -1)
+- serial - Serial number of the Airspy device (default = null)
+- amprate - Sample rate
+- lna-agc - This enables/disables the AGC on the RF front end.  (default = 0)
+- mixer-agc - This enables/disables the AGC associated with the mixer.  (default = 0)
+- lna-gain -  This adjusts the RF front end gain (default = -1)
 mixer-gain - This sets the gain at the mixer (default = -1)
 vga-gain - This sets the gain of the variable-gain amplifier (default = -1)
 gainstep - (default = -1)
