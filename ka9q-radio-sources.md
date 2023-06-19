@@ -65,6 +65,45 @@ data = 2m-antenna-data.local
 
 #### Resources
 
+airspyd
+
+Usage:    airsply [-v] [-f config_file]
+
+The parameters and their defaults are:
+-v:  Verbose mode
+-f:  Config file.  (Default:  "/etc/radio/airspyd.conf")
+If you are testing various configurations of airspyd and you are not running it as a service, it is recommended that you copy the original "airspyd.conf", rename it to something else (e.g. "airspyd_test.conf" and invoke that test file with the command line parameter of "-f airspyd_test.conf".
+This reads from the Airspy SDR, sending status and accepting control commands via its UDP socket - can be run as a service.  Example needed.
+
+The default configuration for airspyd may be found in the file airspyd.conf  - but note that the working version of this file will be found in /etc/radio  - so if you make any changes, you'll need to do so there, likely requiring sudo to edit it.  Also note that at the current time, if you reinstall/update ka9q from the .git, the configuration files in ~/ka9q-radio and /etc/radio will be overwritten.
+
+See "airspy.conf" for configuration example.
+
+Parameters used in the ".conf" file with "airspyd":
+serial - Serial number of the Airspy device (default = null)
+samprate - Sample rate
+lna-agc - This enables/disables the AGC on the RF front end.  (default = 0)
+mixer-agc - This enables/disables the AGC associated with the mixer.  (default = 0)
+lna-gain -  This adjusts the RF front end gain (default = -1)
+mixer-gain - This sets the gain at the mixer (default = -1)
+vga-gain - This sets the gain of the variable-gain amplifier (default = -1)
+gainstep - (default = -1)
+bias - This enables/disables the bias voltage on the antenna connector (default = 0 for off)
+linearity - This sets the gain mode for linearity (default = 0 for off)
+agc-high-threshold - This sets the AGC high-level threshold (default = -10.0 dB)
+agc-low-threshold - This sets the AGC low-level threshold (default = -40.0 dB)
+frequency - The center frequency of the tuner in Hz (default = 0)
+name - The name of the device.  If unspecified, it constructed using the serial number.
+data-ttl - The data (RTP) multicast time-to-live (default = 0)
+status -ttl - The metatdata multicast time-to-live (default = 1)
+blocksize - The block size used for processing  (default = -1)
+description - This is a text description of the receiver - used in metadata.  This often describes the receiver, its purpose and/or antenna.  (default = null)
+ssrc - The ssrc of the RTP data.  (default selected automatically)
+tos - Type of IP service (default = 48  AF12<<2)
+data - The hostname of the RTP multicast stream
+status - The hostname of the metadata multicast stream
+iface - The default interface used for multicast data - typically "lo" (loopback) or "etho0".  (default = null)
+Note:  A default value of "-1" typically refers to a required parameter.
 
 #### Drivers
 
