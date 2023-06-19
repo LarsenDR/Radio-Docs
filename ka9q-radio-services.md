@@ -249,6 +249,46 @@ A program to record rare IQ streams to memory for later post processing.
 - -S:  Status address 
 
 ### metadump
+  
+  This may be used to display the current status of the receiver, using the control/status multicast stream.
+
+- Usage:    metadump [-v] multicast address
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- multicast address:  Multicast address of the status/control stream, not the data stream.
+
+**Example:**
+
+    - metadump rx888-status.local - This shows the current status of the RX-888 receiver, sending it to STDOUT.
+
+**Sample output text:**
+
+Fri 16 Jun 2023 08:10:56.334738 rxtestsvr:36411 CMD : (1) cmd tag 5bf1bbe7
+Fri 16 Jun 2023 08:10:56.334770 rxtestsvr:49475 STAT: (1) cmd tag 5bf1bbe7 (2) commands 162,127 (3) Fri 16 Jun 2023 08:10:56.334755 (4) G5RV RX888 (16) out data src rxtestsvr:37291 (17) out data dst 239.10.102.92:5004 (18) out SSRC 10 (19) out TTL 0 (10) in samprate 64,800,000 Hz (22) out data pkts 481,901,289 (21) out metadata pkts 162,128 (97) rf atten 0.0 dB (98) rf gain 10.0 dB (33) RF 0.000 Hz (48) demod 0 (linear) (20) out samprate 64,800,000 Hz (49) out channels 1 (32) direct conv 1 (39) filt low 0 Hz (40) filt high 3.0456e+07 Hz (82) output bits/sample 16
+
+In the above example we have queried the output stream from an instance of rx888d and can divine the following information about it:
+
+- out data dst 239.10.102.92:5004 - The multicast PCM address is:  239.10.102.92 and the SSRC of the raw PCM data (A/D samples) from the receiver is 10 emanating from port 5004.
+- out TTL 0 - The multicast TTL (Time To Live) is 0
+- in samprate 64,800,000 Hz - The sample rate is 64.8 Msps.
+- out data pkts 481,901,289 - At the time of this data there had been 481,901,289 PCM packets sent and 162,128 metadata packets sent.
+- out metadata pkts 162,128 - The current RF attenuation is 0 dB.
+- rf atten 0.0 dB - The current RF gain setting is 10 dB.
+- RF 0.000 Hz - The "center" frequency of the tuner is 0 Hz.
+- Note:  The RX-888 is a direct sampling receiver which means that it is inhaling everything from DC to the Nyquist limit (more or less).
+- Other common SDRs (RTL-SDR using the converter, AirSpy, SDRPlay, Funcube) use frequency converters to shift a chunk of spectrum to baseband.  The "RF" parameter when used with that type of hardware would show the center frequency to which that converter is tuned.
+- demod 0 (linear - The default "demod" mode is type 0 (linear)
+- out samprate 64,800,000 Hz - The output sample rate is 64.8 Msps:  This is the sample rate that will be presented to "radiod".
+- Note that some hardware/software combinations might do down-sampling within their driver (e.g. filtering and decimation.)
+- out channels 1 - This tells us that we have only one channel of A/D data.
+- As the RX-888 used in this example is a direct sampling receiver, it has only one analog-to-digital converter and it spits out only one stream of sample data.
+- Many other receiver types (SDRPlay, Funcube, Airspy) produce I/Q data and thus require two channels, albeit at half the sample rate to cover the same spectrum as a direct-sampling receiver (e.g. the same amount of data overall.)
+- direct conv 1 - This is another indication that our receiver (RX-888) is a direct conversion (direct sampling) device.
+- filt low 0 Hz and filt high 3.0456e+07 Hz - This tells us the low and high edges of the bandpass filtering in the output stream.
+- As the RX-888 is a direct-sampling receiver, its filter bounds are largerly hardware:  The bottom end of 0 Hz is, of course DC, but the high end is dictated largely by the Nyquist limit - 64.8 - - Msps in this case.  The frequency chown here - 30.456 MHz is about 94% of Nyquist indicating that filtering is occurring in software - which may or may not be superfluous when it comes to a direct-sampling receiver where aliasing is more likely to be the result of deficiencies in the hardware (pre analog-to-digital converter) low-pass filtering.
+- In the case of other types of SDR hardware (SDRPlay, Funcube, Airspy) where it is possible that the down-converting to a lower sample rate (decimation) will involve filtering and that filtering would be indicated by these parmeters.
+- output bits/sample 16 - The RX-888 has a 16 bit A/D converter as reflected in this parameter.
 
 ### modulate
 
