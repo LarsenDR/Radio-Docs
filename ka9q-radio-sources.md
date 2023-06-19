@@ -222,6 +222,30 @@ libhackrf-dev
 
 ### Resources
 
+- Usage:     funcubed [-v] [-f config_file] [-N name] [-L]
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- -f:   Config file (Default:  "funcubed.conf")
+- -N:  Name
+- This reads from the Funcube dongle SDR, accepting control commands from the UPD socket.  The default configuration is in "funcubed.conf" - Can be run as a service.  Example needed.
+
+- Parameters used in the ".conf" file with "funcubed":
+- device - This is a number that specifies the device, typically the serial number (default = 0)
+- iface - The default interface used for multicast data - typically "lo" (loopback) or "etho0".  (default = null)
+- data-ttl - The data (RTP) multicast time-to-live (default = 0)
+- status -ttl - The metatdata multicast time-to-live (default = 1)
+- status - The hostname of the metadata multicast stream (default = null)
+- hold-open - This is a true/false value - not sure what it does (default = true)
+- tos - Type of IP service (default = 48  AF12<<2)
+- ssrc - The ssrc of the RTP data.  (default = 0)
+- blocksize - The block size used for processing  (automatically determined)
+- description - This is a text description of the receiver - used in metadata.  This often describes the receiver, its purpose and/or antenna.  (default = null)
+- data - The hostname of the RTP multicast stream (default = null)
+- calibration - Set frequency calibration
+- bias - This enables/disables the bias voltage on the antenna connector (default = 0 for off)
+- Note:  A default value of "-1" or "null" typically refers to a required parameter.
+
 #### Drivers
 
 #### Configuration
