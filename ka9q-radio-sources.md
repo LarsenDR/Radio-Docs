@@ -20,6 +20,40 @@ This is a list of the iq radio sources that are currently used with the ka9q-rad
  
 #### Resources
 
+- Usage:    rtlsdrd [-A mcast_ifce] [-D mcast_dest_addr] [-I rtlsdr_dev_index] [-L] [-R metadata_dest] [-S rtp_ssrc] [-T rtp_ttl] [-a] [-b] [-c] [-f freq_hz] [-h] [-p IP_tos] [-r sample_rate] [-t mcast_stat_ttl] [-v]
+
+- Note:  "rtlsdrd" does not (yet?) have an associated ".conf" file and all parameters are entered on the command line.
+
+- The parameters and their defaults are:
+- -v:  Verbose mode
+- -A:  Multicast interface (e.g. eth0)
+- -D:  Multicast destination address for RTP (PCM/audio/sample) data.
+- -I:  Input device (Default is device "0")  This may allow the use of the serial number defined by the user using the "rtl_eeprom" utility.
+- -L:  Set "linearity" using gain tables - default without this parameter is "sensitivity"
+- -R:  Metadata destination address
+- -S:  ssrc for multicast output data
+- -T:  TTL (time to live) for RTP data
+- -a:  Enable software AGC
+- -b:  Enable bias voltage on antenna connector (e.g. "bias tee") - Approx. 4.7 volts at 100 mA, max.
+- -c:  Frequency calibration.  This is a decimal number, positive/negative, to adjust the frequency.
+- -f:  Initial center frequency in Hz
+- -p:  IP TOS (Type of service)  (Default:  48  AF12<<2)
+- -r:  Sample rate .  RTL-SDR dongles typically support sample rates of  225-300 kHz and 900-2048 kHz - the upper limit usually being limited by the USB hardware.  Sample rates of higher than 2048 may work in some cases (particularly on USB 3.0 hardware) but this would need to be tested on a per-device basis to determine if samples are dropped.
+- -t:  Multicast status stream TTL (time to live)
+- Note:  Clarification of "Linearity" and "Sensitivity" modes controlled by the "-L" parameter and how gain might be manually set is needed.  It is unknown how this module handles the use of "Converter" mode - via the R820T converter - and "Direct" mode as used <30 MHz.
+
+This reads from an RTL-SDR dongle SDR,sending status and accepting control commands via its UDP socket.  
+
+Comments:
+- This utility currently lacks the following functionality regarding RTL-SDR dongles:
+- The ability to select the "direct" ("Q") input that allows some RTL-SDR devices (such as the RTL-SDR Blog Version 3) to receive at HF frequencies.
+- This ability to manually set the gain of the R820T frequency converter.
+- It is useful to set the gain of the RTL-SDR manually in the following scenario:  In many metropolitan areas, there can be repeaters with signal levels that are >-50 dBm.  As the AGC action of the RTL-SDR will naturally set the gain to maximum in the presence of strong signals, when a signal greater than approximately -65 dB appears in the passband, the receiver will briefly overload prior to the AGC action occurring.  This causes two effects:
+-- All signals being received will be briefly disrupted due to overload.  For voice monitoring, this causes an audible "click", but for AX.25 packet operation, this will probably cause the loss of the entire packet.
+-- Weaker signals will seem to appear and disappear depending on the current AGC-derived gain setting, the depth of gain reduction due to AGC action and the strength of the weak signals.  This issue is unavoidable due to the limited dynamic range of the RTL-SDR's 8 bit A/D, but a fixed gain setting would provide consistency.
+-- It would also be useful to limit how high the AGC gain could go in the absence of other signals.
+--In practice, the manual gain could be set for the user's RF environment emperically - by listening to signals when the strongest local transmitters (e.g. repeaters) are active and/or observing the A/D's peak "dbFS" reading using the control program.
+
 #### Drivers
 
 librtlsdr-dev 
