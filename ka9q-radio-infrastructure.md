@@ -14,6 +14,18 @@ This radio must run on local wired network isolated from wireless networks, you 
 
 The radio can run on a single computer but works best distributed amoung serveral computers in a local network. 
 
+### Install structure
+
+- Install directories and permissions
+
+- Require user configurations
+
+- Map of configurations
+- Map of services
+- Using services
+
+Remebering the 1 to many concept!
+
 1. Example of a minimal single computer, single radio setup.
    
 2. Example of a normal multi-computer multiale radio setup.
