@@ -10,6 +10,11 @@ edited by Dave Larsen, KV0S
 
 This is a list of the iq radio examples that are currently used with the ka9q-radio software.
 
+Simple example to get single radio for one purpose, with different radios.
+
+Normal example on receiver with multiple radiod devices.
+
+Multi reciever, multi computer example.
 
 
 
