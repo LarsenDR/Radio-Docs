@@ -46,7 +46,7 @@ Programs to collect or store radio output.
 
 **Karn, Phil**, KA9Q (karn@ka9q.net) 2021. [The KA9Q-Radio Package](https://tapr.org/37th-arrl-and-tapr-digital-communications-conference/). 40th ARRL and TAPR Digital Communications Conference, Virtual On-Line.
 
-**Karn, Phil**, KA9Q (karn@ka9q.net) 2022.  SDR Forum Dayton Hamvention. 
+**Karn, Phil**, KA9Q (karn@ka9q.net) 2022.  SDR Forum Dayton Hamvention. [PDF](https://files.tapr.org/meetings/DCC_2018/DCC2018-KA9Q-Multicast4SDR-Interconnect.pdf)
 
 **Karn, Phil**, KA9Q (karn@ka9q.net) 2023.  [PAPA club meeting 2023](https://youtu.be/7nhBFSGby2o)
 
