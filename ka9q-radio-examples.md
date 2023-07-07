@@ -14,12 +14,22 @@ This is a list of the iq radio examples that are currently used with the ka9q-ra
 
 # How configurations differ by radio
 
+# Why use serial numbers in configurations files?
 
+ka9q-radio uses serial number if available to deterime which of multiple hardware receivers to use for the specific porpose.
+
+# Best practice for naming .local address targets
+
+# Why is airspy ahd airspyhf in same conf file?
 
 
 ## Single computer examples
 
 Simple examples to get single radio for one purpose, with different radios. The key compnents are outlined so that you can get this type of radio working in this environment.
+
+### rtl-sdr fm broascast example
+
+### rtl-sdr NOAA weather radio example
 
 ### Airspyhf fm braodcast example
 
@@ -33,7 +43,7 @@ Simple examples to get single radio for one purpose, with different radios. The 
 
 ### RX-888 MKII 2mfm example
 
-### rx-888 MKII NOAA radiosonde example
+### RX-888 MKII NOAA radiosonde example
 
 
 ## Hardware driver and radio on one computer and listen or controling from aanother computer
