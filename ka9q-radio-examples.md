@@ -20,7 +20,7 @@ ka9q-radio uses serial number if available to deterime which of multiple hardwar
 
 # Best practice for naming .local address targets
 
-# Why is airspy ahd airspyhf in same conf file?
+# Why is airspy and airspyhf in same conf file?
 
 
 ## Single computer examples
