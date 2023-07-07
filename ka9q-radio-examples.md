@@ -27,7 +27,7 @@ Simple examples to get single radio for one purpose, with different radios. The 
 
 ## Normal example on receiver with multiple radiod devices.
 
-## Multi reciever, multi computer example.
+## Multi receiver, multi computer example.
 
 
 
