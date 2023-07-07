@@ -10,11 +10,24 @@ edited by Dave Larsen, KV0S
 
 This is a list of the iq radio examples that are currently used with the ka9q-radio software.
 
-Simple example to get single radio for one purpose, with different radios.
+# Understandting the radio antenna in the confgiuration process.
 
-Normal example on receiver with multiple radiod devices.
+# How configurations differ by radio
 
-Multi reciever, multi computer example.
+
+
+
+## Single computer examples
+
+Simple examples to get single radio for one purpose, with different radios. The key compnents are outlined so that you can get this type of radio working in this environment.
+
+
+## Hardware driver and radio on one computer and listen or controling from aanother computer
+
+
+## Normal example on receiver with multiple radiod devices.
+
+## Multi reciever, multi computer example.
 
 
 
