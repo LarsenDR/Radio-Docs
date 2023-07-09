@@ -8,7 +8,7 @@ This is a list of the iq radio infastructure that are currently used with the ka
 
 ## [Overview](/ka9q-radio-document.md)
 
-Descriptions of how this radio system works by interacting with you Linux base operating system and the multicast enabled wired network.  At this time ka9q-radio is NOT recommend for networks attaced to WiFi networks!
+Descriptions of how this radio system interacts with your Linux base operating system and the multicast-enabled wired network.  At this time, ka9q-radio will overwhelm and NOT work well on WiFi networks!
 
 ## [Index](/ka9q-radio-index.md)
 
@@ -22,11 +22,11 @@ Descriptions of the radio and network addressing of the radio system.
 
 ## [Examples](/ka9q-radio-examples.md)
 
-Simple examples with all the piese you ne to implement each example.
+Simple examples with some pointers for what you need to implement each example.
 
 ## [Sources](/ka9q-radio-sources.md)
 
-Hardware radios that are currently supported by the ka9q-radio system.
+Hardware radios that the ka9q-radio system currently supports.
 
 ## [Services](/ka9q-radio-services.md)
 
